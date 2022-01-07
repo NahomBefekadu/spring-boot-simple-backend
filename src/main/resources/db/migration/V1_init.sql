@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS Message (
     INDEX fk_Message_User_idx (User_UserID ASC) VISIBLE,
     CONSTRAINT fk_Message_User
     FOREIGN KEY (User_UserID)
-    REFERENCES twitterdb.User (UserID)
+    REFERENCES User (UserID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -35,12 +35,12 @@ CREATE TABLE IF NOT EXISTS Subscription (
     INDEX fk_Subscription_User2_idx (followerID ASC) VISIBLE,
     CONSTRAINT fk_Subscription_User1
     FOREIGN KEY (userID)
-    REFERENCES twitterdb.User (UserID)
+    REFERENCES User (UserID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
     CONSTRAINT fk_Subscription_User2
     FOREIGN KEY (followerID)
-    REFERENCES twitterdb.User (UserID)
+    REFERENCES User (UserID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
