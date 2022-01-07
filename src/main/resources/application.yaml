@@ -1,0 +1,5 @@
+app:
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/twitterdb
+    username: root
+    password: password
