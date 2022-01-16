@@ -1,6 +1,6 @@
 # spring-boot-simple-backend
 
-Twitter based applicaiton Back-end
+Twitter based application Back-end
 
 
 ### Outstanding Requirements
