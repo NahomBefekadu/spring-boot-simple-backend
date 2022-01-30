@@ -25,7 +25,6 @@ public class UserController {
 
     //Routes
 
-
     @GetMapping
     public List<Person> getAllUsers(){ return userService.getAllUsers(); }
 

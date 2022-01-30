@@ -22,7 +22,7 @@ public class UserManagementService {
 
     public UUID createToken() {
         UUID uuid = UUID.randomUUID();
-       // System.out.println(uuid);
+        System.out.println(uuid);
         Tokens.add(uuid);
         return uuid;
     }

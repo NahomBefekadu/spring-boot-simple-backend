@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,14 +28,10 @@ public class MessageController {
 
     //Routes
     @GetMapping
-    public List<Message> getAllMessages(@RequestParam ("token") UUID token){
-        if (auther.TokenExists(token)){
+    public List<Message> getAllMessages(){
+
             return messageService.getAllMessages();
-        }else{
-            throw new ResponseStatusException(
-                    HttpStatus.UNAUTHORIZED, "Action Not Allowed"
-            );
-        }
+
     }
     @GetMapping(path = "{id}")
     public Message getMessage(@PathVariable("id") int id,@RequestParam ("token") UUID token){
@@ -79,5 +76,13 @@ public class MessageController {
         }
         }
 
-
+    @RequestMapping("/user")
+    @ResponseBody
+    public Principal user(Principal principal){
+        System.out.println(principal.getName());
+        String userN= String.valueOf(principal.getName());
+        System.out.println(userN);
+        System.out.println(auther.createToken());
+        return principal;
+    }
 }

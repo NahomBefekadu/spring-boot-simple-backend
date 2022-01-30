@@ -3,15 +3,13 @@ package org.ac.cst8277.Befekadu.Nahom.twitternbk.api;
 
 import org.ac.cst8277.Befekadu.Nahom.twitternbk.model.Person;
 import org.ac.cst8277.Befekadu.Nahom.twitternbk.service.UserManagementService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.UUID;
 
-@RequestMapping("api/v1/Login")
+@RequestMapping("api/v1/auth")
 @RestController
 public class Login {
 
@@ -21,7 +19,6 @@ public class Login {
 
     private final UserController userController;
     UserManagementService auther = new UserManagementService() ;
-
 
 
     @PostMapping
@@ -36,5 +33,7 @@ public class Login {
         }
         return new Result("Access Denied",null);
     }
+
+
 
 }

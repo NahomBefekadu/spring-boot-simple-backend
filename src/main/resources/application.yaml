@@ -3,3 +3,12 @@ app:
     jdbc-url: jdbc:mysql://localhost:3306/twitterdb
     username: root
     password: password
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientID: your id
+            clientSecret: your secret
+            scope: email,profile

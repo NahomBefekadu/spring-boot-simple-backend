@@ -49,8 +49,12 @@ ENGINE = InnoDB;
 
 INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('Luffy', 'ABCDEF', 'luffy@onepiece.com', '981', '1999-10-20');
 INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('Naruto', 'XYZe', 'naruto@shipuden.gov', '500', '2007-02-15');
-INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('Ichigo', 'LKJH', 'Ichigo@bleach.com	', '366', '2004-10-05');
-
+INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('Ichigo', 'LKJH', 'Ichigo@bleach.com	', '366', '2000-01-05');
+INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('dave', 'batista', 'dave@bleach.com	', '126', '2008-10-15');
+INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('joe', 'pistachio', 'joe@bleach.com	', '3156', '2014-12-05');
+INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('kevin', 'deve', 'kevin@bleach.com	', '76', '2004-10-25');
+INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('gotcha', 'shores', 'gotcha@bleach.com	', '666', '2007-08-05');
+INSERT INTO User (UserName, password, email, subscriberCount, createDate) VALUES ('bobby', 'kale', 'bobby@bleach.com	', '36', '2020-11-15');
 -- insert statement for Messages
 
 INSERT INTO Message (content, likesCount, retweetCount, createDate, User_UserID) VALUES ('Message one', '13', '21', '2009-10-20', '1');
